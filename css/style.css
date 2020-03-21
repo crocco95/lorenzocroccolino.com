@@ -40,8 +40,7 @@ body {
     min-width: 320px;
     position: relative;
     overflow-x: hidden;
-    background: linear-gradient(to right, #fff0f0 0%, #fff0f0 60%, white 60%);
-    background-position: center;
+    background: linear-gradient(to right, #ececec 0%, #ececec 60%, white 60%) center;
 }
 
 p {
@@ -100,7 +99,7 @@ img.block-right {
 .page-wrapper {
     pointer-events: auto;
     width: 100%;
-    background-color: #fff0f0;
+    background-color: transparent;
     max-width: 800px;
 }
 
@@ -674,7 +673,7 @@ img.block-right {
 }
 
 .close-icon {
-    background-image: url(images/close-left-arrow.png);
+    background-image: url(../images/close-left-arrow.png);
     background-repeat: no-repeat;
     width: 70px;
     height: 70px;
@@ -744,7 +743,7 @@ div.pp_default .pp_loaderIcon {
 }
 
 div.pp_default a.pp_arrow_previous {
-    background-image: url(images/nav_left.png);
+    background-image: url(../images/nav_left.png);
     background-size: 20px 20px;    
     width: 20px;
     height: 20px;
@@ -756,7 +755,7 @@ div.pp_default a.pp_arrow_previous {
 }
 
 div.pp_default a.pp_arrow_next {
-    background-image: url(images/nav_right.png);
+    background-image: url(../images/nav_right.png);
     background-size: 20px 20px;    
     width: 20px;
     height: 20px;
@@ -777,7 +776,7 @@ div.pp_default a.pp_arrow_next:hover {
 }
 
 div.pp_default .pp_close {
-    background-image: url(images/close.png);
+    background-image: url(../images/close.png);
     background-size: 30px 30px;
     margin-top: 5px;
     text-indent: -99999999px;
@@ -786,7 +785,7 @@ div.pp_default .pp_close {
 }
 
 div.pp_default .pp_next:hover {
-    background: url(images/nav_right.png);
+    background: url(../images/nav_right.png);
     cursor: pointer;
     background-repeat: no-repeat;
     background-position: 95% 50%;
@@ -794,7 +793,7 @@ div.pp_default .pp_next:hover {
 }
 
 div.pp_default .pp_previous:hover {
-    background: url(images/nav_left.png);
+    background: url(../images/nav_left.png);
     cursor: pointer;
     background-repeat: no-repeat;
     background-position: 5% 50%;

@@ -1,0 +1,62 @@
+.text-justify{
+    text-align: justify;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.quote-author-name{
+    font-size: initial;
+}
+
+.quote-author-name:before{
+    content: '(';
+}
+
+.quote-author-name:after{
+    content: ')';
+}
+
+.serv-block-wrap .serv-block-item{
+    width: calc(50% - 1.5rem);
+    margin-bottom: 3rem;
+}
+
+.serv-block-item{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    padding: 1rem 1rem;
+    /*background-color: #f44647;*/
+}
+
+.serv-block-item:hover > h4{
+    color: #f44647!important;
+}
+
+.serv-block-item p{
+    text-align: justify;
+}
+
+.skills-history a{
+    color: #fff;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+footer{
+    background-color: #666666;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+footer p{
+    color: #ffffff;
+    margin: 0 auto;
+}
+
+#love-love-love{
+    color: #f44647;
+}
