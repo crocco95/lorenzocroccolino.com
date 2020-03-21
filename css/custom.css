@@ -6,6 +6,38 @@
     text-align: center;
 }
 
+.text-right{
+    text-align: right;
+}
+
+.text-secondary{
+    color: #999999;
+}
+small{
+    font-size: 80%;
+}
+
+.btn{
+    padding: .7rem 1.7rem;
+    font-size: 1rem;
+    border: none;
+
+    cursor: pointer;
+}
+
+.btn.btn-accent{
+    background-color: #f44647;
+    color: #ffffff;
+    border: solid 3px #f44647;
+
+    transition: all .2s;
+}
+
+.btn.btn-accent:hover{
+    background-color: transparent;
+    color: inherit;
+}
+
 .quote-author-name{
     font-size: initial;
 }
