@@ -7,8 +7,6 @@ name: FTP Upload
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 jobs:
   deploy:
@@ -19,6 +17,6 @@ jobs:
     - name: git-ftp push
       uses: sebastianpopp/git-ftp-action@releases/v3
       with:
-        url: "ftp://ftp.example.com/path/"
+        url: "ftp://ftp.lorenzocroccolino.com"
         user: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PWD }}
