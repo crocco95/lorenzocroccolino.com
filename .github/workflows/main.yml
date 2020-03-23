@@ -1,0 +1,24 @@
+# This is a basic workflow to help you get started with Actions
+
+name: FTP Upload
+
+# Controls when the action will run. Triggers the workflow on push or pull request 
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: git-ftp push
+      uses: sebastianpopp/git-ftp-action@releases/v3
+      with:
+        url: "ftp://ftp.example.com/path/"
+        user: ${{ secrets.FTP_USER }}
+        password: ${{ secrets.FTP_PWD }}
