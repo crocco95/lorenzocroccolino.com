@@ -51,8 +51,8 @@ small{
 }
 
 .serv-block-wrap .serv-block-item{
-    width: calc(50% - 1.5rem);
-    margin-bottom: 3rem;
+    /*width: calc(50% - 1.5rem);*/
+    /*margin-bottom: 3rem;*/
 }
 
 .serv-block-item{
