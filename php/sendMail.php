@@ -1,32 +1,20 @@
 <?php
-include_once (dirname(dirname(__FILE__)) . '/config.php');
+
+$company_name = $_POST['company-name'];
+$email = $_POST['email'];
+$message = $_POST['message'];
+$message .= "<br/><br/>";
+$my_email = 'from-my-website@lorenzocroccolino.com';
 
 //Initial response is NULL
 $response = null;
 
-//Initialize appropriate action and return as HTML response
-if (isset($_POST["action"])) {
-    $action = $_POST["action"];
+if (isset($_POST["email"]) && !empty($_POST["email"])) {
 
-    switch ($action) {
-        case "SendMessage": {
-                if (isset($_POST["email"]) && !empty($_POST["email"])) {
-
-                    $message = $_POST["message"];
-                    $message .= "<br/><br/>";
-
-                    $response = (SendEmail($message, $_POST["subject"], $_POST["name"], $_POST["email"], $email)) ? 'Messaggio inviato con successo' : "Errore durante l'invio del messaggio";
-                } else {
-                    $response = "Errore durante l'invio del messaggio";
-                }
-            }
-            break;
-        default: {
-                $response = "Invalid action is set! Action is: " . $action;
-            }
+        $response = (SendEmail($message, $subject], $company_name, $email, $my_email)) ? 'Messaggio inviato con successo' : "Errore durante l'invio del messaggio";
+    } else {
+        $response = "Errore durante l'invio del messaggio";
     }
-}
-
 
 if (isset($response) && !empty($response) && !is_null($response)) {
     echo '{"ResponseData":' . json_encode($response) . '}';
