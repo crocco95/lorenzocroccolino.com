@@ -1,5 +1,4 @@
 <?php
-
 include_once (dirname(dirname(__FILE__)) . '/config.php');
 
 //Initial response is NULL
@@ -14,11 +13,11 @@ if (isset($_POST["action"])) {
                 if (isset($_POST["email"]) && !empty($_POST["email"])) {
 
                     $message = $_POST["message"];
-                    $message .= "<br/><br/>";                                        
+                    $message .= "<br/><br/>";
 
-                    $response = (SendEmail($message, $_POST["subject"], $_POST["name"], $_POST["email"], $email)) ? 'Message Sent' : "Sending Message Failed";
+                    $response = (SendEmail($message, $_POST["subject"], $_POST["name"], $_POST["email"], $email)) ? 'Messaggio inviato con successo' : "Errore durante l'invio del messaggio";
                 } else {
-                    $response = "Sending Message Failed";
+                    $response = "Errore durante l'invio del messaggio";
                 }
             }
             break;
@@ -38,7 +37,7 @@ function SendEmail($message, $subject, $name, $from, $to) {
     // Content-type header
     $headers = 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-    // Additional headers    
+    // Additional headers
     $headers .= 'From: ' . $name .'<'.$from .'>';
 
     mail($to, $subject, $message, $headers);
