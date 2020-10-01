@@ -93,7 +93,7 @@
                     </div>
 
                     <ul class="serv-link-cover block-right" data-jarallax-element="0 40">
-                        <li><a href="#" target="_blank">DOWNLOAD CV</a></li>
+                        <li><a href="/docs/curriculum_vitae_lorenzo_croccolino.pdf" target="_blank">LEGGI/SCARICA CV</a></li>
                         <li><a href="/contatti">CONTATTAMI</a></li>
                     </ul>
 
