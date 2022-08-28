@@ -101,7 +101,7 @@
         $('.section').each(function () {
             var element = $(this).attr('id');
             if ($('#' + element).is('*')) {
-                if ($(window).scrollTop() >= $('#' + element).offset().top - 150) {
+                if ($(window).scrollTop() >= $('#' + element).offset().top - 300) {
                     currentSection = element;
                 }
             }
