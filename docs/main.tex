@@ -1,0 +1,122 @@
+% Righe di impostazioni per TeXworks e TeXstudio
+% !TEX encoding = UTF-8
+% !TEX program = pdflatex
+% !TEX spellcheck = it_IT
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+\moderncvstyle{casual}
+\moderncvcolor{lorenzo}
+
+% alcuni pacchetti standard
+\usepackage[english,italian]{babel} % solo se si scrive in italiano
+\usepackage[utf8]{inputenx}
+\usepackage[left=2cm,right=2cm,top=1.8cm,bottom=2.2cm]{geometry}
+%\usepackage{fontspec}
+
+\AfterPreamble{
+	\hypersetup{
+		colorlinks=true,
+		linkcolor=color1,
+		urlcolor=color1
+	}
+}
+% questa riga allarga la colonna di sinistra
+\setlength{\hintscolumnwidth}{3.7cm}
+
+% personal data
+\firstname{Lorenzo}
+\familyname{Croccolino}
+\title{Curriculum Vitae}
+\address{Via Bagnacavallo 2 }{47922, Rimini (RN), Italy}
+\mobile{+39\,331 1181841}
+\email{hello@lorenzocroccolino.com}
+
+\definecolor{color3}{HTML}{333333}
+\photo[70pt]{foto.jpg}
+
+\begin{document}
+
+\vspace*{-2cm}
+\maketitle
+\vspace*{-1cm}
+
+\section{Informazioni personali}
+\cvline{Nome}{Lorenzo}
+\cvline{Cognome}{Croccolino}
+\cvline{Luogo e data di nascita}{Rimini (RN), 5 Agosto 1995}
+\cvline{Nazionalità}{Italiana}
+
+\section{Istruzione e Formazione}
+\cventry{Set. 2020 -- In corso}{Laurea magistrale in Ingegneria e Scienze informatiche.\newline
+Università di Bologna, campus di Cesena}{}{Cesena (FC)}{}{}
+\cventry{Set. 2014 -- Ott. 2019}{Laurea triennale in Ingegneria e Scienze informatiche.\newline
+Università di Bologna, campus di Cesena}{}{Cesena (FC)}{}{}
+\cventry{Set. 2009 -- Lug. 2014}{Diploma di Perito Agrario\newline Istituto Tecnico Agrario}{}{Cesena(FC)}{}{}
+\section{Esperienze lavorative}
+\cventry{Ott. 2016 -- Ago. 2019}{Sviluppo software per la gestione dei guasti su impianti}{AREN Electric Power Spa}{}{}{
+Collaboratore esterno con l'obiettivo (raggiunto) di sviluppare un nuovo software per la gestione di ticket di intervento relativi a guasti e manutenzione su impianti per la produzione di energia rinnovabile. Il software è ancora utilizzato in produzione.
+Durante la medesima collaborazione è stato sviluppato il sito corporate basato su un CMS completamente custom scritto in PHP. Il sito ad oggi è ancora online.}
+
+\cventry{Nov. 2017 -- Ago. 2019}{Sviluppo software per il monitoraggio dei consumi}{Daf.Net Srl}{}{}{
+Collaboratore esterno (oggi Onit sistemi S.r.l.) per lo sviluppo di un software per il monitoraggio di consumi elettrici all'interno di edifici aziendali. In seguito a questa attività è stato sviluppato il sito corporate aziendale, ancora oggi online.}
+
+\cventry{Gen. 2018 -- Set. 2019}{Sviluppo IA robot (side project)}{}{}{}{
+Tentativo di sviluppo di un robot basato sull'identificazione e l'inseguimento di un operatore umano attraverso lo sviluppo di un'intelligenza artificiale utilizzando ROS e altre tecnologie per lo sviluppo di applicazioni robotiche. Il progetto era indipendente ed interamente auto-finanziato.}
+
+\cventry{Mar. 2018 -- In corso}{Sviluppo software e-commerce (side project)}{Amburgheria Creativa}{}{}{
+Collaborazione con Amburgheria Creativa di Forlì per lo sviluppo di un sito e-commerce per hamburgher slow-food. Il software copre anche la parte di amministrazione fornendo insights e statistiche. La prima versione del software è stata sviluppata custom utilizzando PHP e dotando il software di un back-office per la gestione di ordini, prodotti, ricette e altro.}
+
+\cventry{Ago. 2019 -- In corso}{Sviluppo software backend}{DMA Srl}{}{}{
+Collaborazione nata sullo sviluppo di applicazioni mobile multipiattaforma, applicazioni web a microservizi basate e creazione di siti web con piattaforma Wordpress.
+Dal 2020 il focus della collaborazione si è spostato sull'implementazione di applicazioni di dimensioni sempre più grandi con infrastruttura serverless su cloud platform AWS e con l'utilizzo di tecnologie sempre più avanzate e professionali.
+Dal 2022 la collaborazione si è trasformata in un rapporto di lavoro dipendente e il livello dei progetti si è continuato ad avanzare.}
+
+
+\section{Competenze linguistiche}
+\cvline{\textbf{Italiano}}{Lingua madre}
+\cvline{\textbf{Inglese}}{Certificazione linguistica B2}
+
+\section{Competenze tecniche}
+\cvitem{}{Dal punto di vista delle tecnologie che conosco di più e che utilizzo quotidianamente su progetti piccoli e grandi sono le seguenti:}
+\cventry{Dal 2020}{Javascript (Typescript)}{}{}{}{
+è il linguaggio che preferisco per implementare software, in particolare in ambiente serverless.
+Di solito sviluppo utilizzando TS con runtime Node, questo mi permette di ottimizzare il processo di build tramite tsc per avere un compilato il più leggero possibile, così da poterlo utilizzare senza problemi di performance su AWS Lambda o simili servizi FAAS.
+}
+
+\cventry{Dal 2020}{AWS Cloudformation}{}{}{}{
+Servizio/Tecnologia AWS che mi permette di scrivere e versionare l'intera architettura software utilizzando sistassi Yaml. Utilizzata per ogni progetto di sviluppo aziendale e side-project.}
+
+\cventry{Dal 2020}{AWS Lambda}{}{}{}{Forse la tecnologia che preferisco di più in assoluto fra quelle che uso su base quotidiana. CI/CD semplice da implementare, scalabile by-design e molto semplice da gestire e manutenere.}
+
+\cventry{Dal 2011}{PHP}{}{}{}{Sviluppo di piattaforme Wordpress di grandi dimensioni ed mantenimento d'infrastrutture legacy. Durante la mia esperienza all'interno di DMA. Ho sviluppato invieme al team e messo in produzione un'intera infrastruttura scritta su AWS Cloudformation per gestire Wordpress in ambiente serverless Fargate scalato su orchestratore ECS. Ho utilizzato Laravel e Lumen in alcuni progetti per applicazioni a microservizi.}
+
+\cventry{Dal 2020}{C\#}{}{}{}{Sviluppo di piccoli server agent, software ETL e altre CLI utility}
+
+\cventry{Dal 2020}{Vari servizi AWS}{}{}{}{Altri servizi AWS come ECS, S3, Cloudfront, SQS, ecc...}
+
+\cventry{Dal 2011}{Server administration}{}{}{}{Gestione con livello di esperienza intermedio di server con OS GNU/Linux. Non sono in alcun modo un sistemista ma mi reputo in grado di eseguire il setup di un server/vps/vm in modo per l'utilizzo in produzione di applicazioni web.}
+
+\cvitem{}{Altre tecnologie che uso in modo saltuario o che non uso più sono: Java, Visual Basic, C++}
+
+\section{Competenze organizzative e relazionali}
+\cvline{}{ La libera professione ed il percorso universitario mi hanno insegnato il rispetto delle tempistiche, fatto crescere in termini di capacità organizzative ed insegnato un metodo di apprendimento. Mi fa sempre grande piacere ricevere compiti di responsabilità e partecipare a progetti che portino con essi sfide e una difficoltà tale da farmi crescere. Apprezzo sempre il fatto di lavorare in team e di poter scambiare esperienze, pareri e conoscenza con le persone che ne fanno parte.
+}.
+\section{Patenti}
+\cvline{Patente di guida}{B}
+\cvline{Altre patenti}{Patente europea per l'utilizzo del computer(ECDL)}	
+
+\section{Links}
+\cvline{Sito web}{\url{https://lorenzocroccolino.com}}
+\medbreak
+\cvline{Mail}{\href{mailto:hello@lorenzocroccolino.com}{\nolinkurl{hello@lorenzocroccolino.com}}\medbreak
+\href{mailto:croccolino.lorenzo@gmail.com}{\nolinkurl{croccolino.lorenzo@gmail.com}}\medbreak
+	}
+\cvline{GitHub}{\url{https://github.com/crocco95}}
+
+\vspace{\fill}
+Rimini, \today
+
+\end{document}
+
+
